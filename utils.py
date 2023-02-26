@@ -48,6 +48,25 @@ def get_post_by_pk(pk):
             list_.append(post)
     return list_
 
+def get_post_by_tag(tag):
+    list_ = []
+    for post in get_posts_all('D:\pythonProject\mini_instagram\data\posts.json'):
+        if f'#{tag}' in post['content']:
+            list_.append(post)
+    return list_
+
+def get_bookmarks():
+    with open(r'D:\pythonProject\mini_instagram\data\bookmarks.json', 'r', encoding='utf-8') as file:
+        posts = load(file)
+    return posts
+
+def add_bookmarks(post):
+    with open(r'D:\pythonProject\mini_instagram\data\bookmarks.json', 'a', encoding='utf-8') as file:
+        file.write(post)
+
+
+
+
 
 
 

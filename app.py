@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
-from utils import get_posts_all, get_comment_by_id, search_for_posts, get_posts_by_user, get_post_by_pk
+from flask import Flask, render_template, request, redirect
+from utils import get_posts_all, get_comment_by_id, search_for_posts, get_posts_by_user, get_post_by_pk, \
+    get_post_by_tag, get_bookmarks, add_bookmarks
 from werkzeug.exceptions import BadRequest
 from json import dumps
 import logging
@@ -41,6 +42,24 @@ def search_page():
         items = search_for_posts(request.form.get('searching_string'))
         amount = len(items)
         return render_template('search.html', items=items, amount=amount)
+
+@app.route('/tag/<tag>')
+def tag_page(tag):
+    items = get_post_by_tag(tag)
+    return render_template('tag.html', items=items, tag=tag)
+
+@app.route('/bookmarks')
+def bookmarks():
+    items = get_bookmarks()
+    return render_template('bookmarks.html', items=items)
+
+
+@app.route('/bookmarks/<int:id>')
+def bookmark(id):
+    post = None #доработать закладку
+    return render_template('bookmarks.html', items=post)
+
+
 
 @app.route('/api/posts')
 def api_posts():
