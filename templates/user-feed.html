@@ -26,25 +26,25 @@
       {% for item in items %}
       <div class="items__item item">
         <div class="item__top">
-          <a href="/" class="item__head">
+          <a href="posts/{{ item['pk'] }}" class="item__head">
             <div class="item__ava-wrap">
               <img src="{{item['poster_avatar']}}" alt="" class="item__ava" width="47">
             </div>
             <span class="item__username">{{item['poster_name']}}</span>
           </a>
         </div>
-        <a href="/post.html" class="item__post-link">
+        <a href="posts/{{ item['pk'] }}" class="item__post-link">
           <img src="{{item['pic']}}" alt="" width="348" class="item__post-img">
         </a>
         <p class="item__descr"><a href="#" class="item__tag">#food</a>{{item['content']}}</p>
         <div class="item__post-info">
           <div class="item__counter">
-            <img src="img/eye.png" alt="" class="item__counter-icon" width="26">
+            <img src="{{ url_for('static', filename='img/eye.png') }}" alt="" class="item__counter-icon" width="26">
             <span class="item__counter-text">{{item['views_count']}}</span>
           </div>
         </div>
         <div class="item__post-bottom">
-          <a href="/post.html" class="item__btn-more">Подробнее</a>
+          <a href="posts/{{ item['pk'] }}" class="item__btn-more">Подробнее</a>
           <button type="button" class="item__bookmark-btn">
             <img src="{{ url_for('static', filename='img/bookmark.png') }}" alt="" class="item__bookmark-icon" width="24">
           </button>
