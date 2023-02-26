@@ -29,7 +29,7 @@ def get_comment_by_id(post_id):
     list_ = []
     for comment in get_posts_all('D:\pythonProject\mini_instagram\data\comments.json'):
         if comment['post_id'] == post_id:
-            list_.append(comment['comment'])
+            list_.append(comment)
     return list_
 
 
