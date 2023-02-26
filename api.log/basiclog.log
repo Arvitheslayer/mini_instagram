@@ -108,3 +108,8 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:56:24] "GET /users HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:56:24] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:56:24] "GET /static/css/styles.min.css.map HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Запрос /api/posts2/
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 17:10:50] "GET /api/posts/2 HTTP/1.1" 200 -
