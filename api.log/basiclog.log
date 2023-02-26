@@ -1,0 +1,32 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Запрос /api/posts5/
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:29] "GET /api/posts/5 HTTP/1.1" 200 -
+INFO:root:Запрос /api/posts
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:34] "GET /api/posts HTTP/1.1" 200 -
+INFO:root:Запрос /api/posts2/
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:37] "GET /api/posts/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:40] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:40] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:40] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:41] "GET /static/css/styles.min.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:45] "POST /search HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:45] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:45] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:45] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:45] "GET /static/css/styles.min.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:47] "GET /posts/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:47] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:47] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:47] "[33mGET /posts/img/eye.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:47] "GET /static/css/styles.min.css.map HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:49] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:49] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:49] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Feb/2023 16:39:49] "GET /static/css/styles.min.css.map HTTP/1.1" 200 -
