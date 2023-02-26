@@ -36,7 +36,7 @@ def get_comment_by_id(post_id):
 def search_for_posts(query):
     list_ = []
     for post in get_posts_all('D:\pythonProject\mini_instagram\data\posts.json'):
-        if query in post['content']:
+        if query.lower() in post['content'].lower():
             list_.append(post)
     return list_
 

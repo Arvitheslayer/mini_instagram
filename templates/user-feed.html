@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed</title>
+  <title>User feed</title>
   <link href="{{ url_for('static', filename='css/styles.min.css') }}" rel="stylesheet">
 </head>
 
@@ -17,11 +17,16 @@
         </svg>
       </a>
       <a href="/" class="header__logo-link">
-        <h1 class="header__logo-text">Feed</h1>
+        <h1 class="header__logo-text">Instamini</h1>
       </a>
     </div>
   </header>
   <main class="container">
+    <div class="search">
+      <form action="/users" method="POST" class="search__form">
+        <input type="search" name="user_name" class="search__input">
+      </form>
+    </div>
     <section class="items">
       {% for item in items %}
       <div class="items__item item">
@@ -51,8 +56,7 @@
         </div>
       </div>
       {% endfor %}
-
-    </section>
+  </section>
   </main>
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <symbol id="back" viewbox="0 0 19 16" fill="none" width="19" height="16">
