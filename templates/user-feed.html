@@ -31,7 +31,7 @@
       {% for item in items %}
       <div class="items__item item">
         <div class="item__top">
-          <a href="posts/{{ item['pk'] }}" class="item__head">
+          <a href="/users/{{item['poster_name']}}" class="item__head">
             <div class="item__ava-wrap">
               <img src="{{item['poster_avatar']}}" alt="" class="item__ava" width="47">
             </div>
@@ -50,9 +50,11 @@
         </div>
         <div class="item__post-bottom">
           <a href="posts/{{ item['pk'] }}" class="item__btn-more">Подробнее</a>
+          <a href="/bookmarks/add/{{ item['pk'] }}">
           <button type="button" class="item__bookmark-btn">
             <img src="{{ url_for('static', filename='img/bookmark.png') }}" alt="" class="item__bookmark-icon" width="24">
           </button>
+            </a>
         </div>
       </div>
       {% endfor %}

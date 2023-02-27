@@ -1,5 +1,5 @@
 from json import load
-
+from json import dumps
 def get_posts_all(path):
     with open(path, 'r', encoding='utf-8') as file:
         posts = load(file)
@@ -60,9 +60,27 @@ def get_bookmarks():
         posts = load(file)
     return posts
 
-def add_bookmarks(post):
-    with open(r'D:\pythonProject\mini_instagram\data\bookmarks.json', 'a', encoding='utf-8') as file:
-        file.write(post)
+
+def add_bookmark(post):
+    with open(r'D:\pythonProject\mini_instagram\data\bookmarks.json', 'r', encoding='utf-8') as file:
+        list_ = load(file)
+    list_.append(post)
+    with open(r'D:\pythonProject\mini_instagram\data\bookmarks.json', 'w', encoding='utf-8') as file:
+        x = dumps(list_, ensure_ascii=False, indent=4)
+        file.write(x)
+
+
+def delete_bookmarkx(postid):
+    with open(r'D:\pythonProject\mini_instagram\data\bookmarks.json', 'r', encoding='utf-8') as file:
+        list_ = load(file)
+    for i in range(len(list_)):
+        if list_[i]['pk'] == postid:
+            list_.pop(i)
+            break
+    with open(r'D:\pythonProject\mini_instagram\data\bookmarks.json', 'w', encoding='utf-8') as file:
+        x = dumps(list_, ensure_ascii=False, indent=4)
+        file.write(x)
+
 
 
 
